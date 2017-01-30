@@ -33,3 +33,4 @@ The `currency-flag` selector has a default `display` of `inline-block`, size of 
 1. Update version in `package.json`
 1. Commit to a new branch, include css files changed by build process
 1. Open a pull request
+1. Draft a release on GitHub with the same version as specified in `package.json`
