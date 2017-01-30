@@ -11,8 +11,8 @@
     "build": "npm run minify-images && npm run inline-images && npm run change-class-names && npm run add-default-styles && npm run minify-css && rm -rf build && echo 'Done.'",
     "minify-images": "imagemin 'src/flags/*' 'build/flags'",
     "inline-images": "imacss 'build/flags/*.png' > 'build/currency-flags-backgrounds.css'",
-	"change-class-names": "sed -i '' 's/imacss/currency-flag/g' 'build/currency-flags-backgrounds.css'",
-	"add-default-styles": "cat 'src/styles.css' 'build/currency-flags-backgrounds.css' > 'dist/currency-flags.css'",
+    "change-class-names": "sed -i.bak 's/imacss/currency-flag/g' build/currency-flags-backgrounds.css",
+    "add-default-styles": "cat 'src/styles.css' 'build/currency-flags-backgrounds.css' > 'dist/currency-flags.css'",
     "minify-css": "cleancss -o 'dist/currency-flags.min.css' 'dist/currency-flags.css'"
   },
   "repository": {
