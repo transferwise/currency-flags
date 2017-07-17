@@ -1,13 +1,10 @@
 # currency-flags
+
 This package outputs two CSS files (minified and unminified) with classes for currency codes using base64 background images inlined.
 
 ## How to use
 
 **1. Install**
-
-`bower install --save https://github.com/transferwise/currency-flags.git`
-
-or
 
 `npm install --save https://github.com/transferwise/currency-flags.git`
 
@@ -29,8 +26,7 @@ The `currency-flag` selector has a default `display` of `inline-block`, size of 
 1. Clone repo
 1. Run `npm install`
 1. Add correctly sized (`48x32`) `png` files to `src/flags`
-1. Run `npm start`
-1. Update version in `package.json`
+1. Run `npm run build`
 1. Commit to a new branch, include css files changed by build process
 1. Open a pull request
 1. Draft a release on GitHub with the same version as specified in `package.json`

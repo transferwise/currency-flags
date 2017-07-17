@@ -7,9 +7,8 @@
     "dist/currency-flags.min.css"
   ],
   "scripts": {
-    "start": "npm run build --silent",
     "build": "npm run minify-images && npm run inline-images && npm run change-class-names && npm run add-default-styles && npm run minify-css && rm -rf build && echo 'Done.'",
-    "minify-images": "imagemin 'src/flags/*' 'build/flags'",
+    "minify-images": "imagemin 'src/flags/*' --out-dir='build/flags'",
     "inline-images": "imacss 'build/flags/*.png' > 'build/currency-flags-backgrounds.css'",
     "change-class-names": "sed -i.bak 's/imacss/currency-flag/g' build/currency-flags-backgrounds.css",
     "add-default-styles": "cat 'src/styles.css' 'build/currency-flags-backgrounds.css' > 'dist/currency-flags.css'",
@@ -22,8 +21,8 @@
   "author": "oliverviljamaa",
   "license": "MIT",
   "devDependencies": {
-    "clean-css": "^3.4.12",
+    "clean-css-cli": "^4.1.6",
     "imacss": "^1.0.0",
-    "imagemin-cli": "^2.1.0"
+    "imagemin-cli": "^3.0.0"
   }
 }
