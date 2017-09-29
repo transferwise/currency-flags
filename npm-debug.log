@@ -1,0 +1,110 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'n' ]
+2 info using npm@4.1.2
+3 info using node@v7.6.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData n
+8 silly fetchNamedPackageData n
+9 silly mapToRegistry name n
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'n',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'n',
+12 silly mapToRegistry   name: 'n',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/n
+14 verbose request uri https://registry.npmjs.org/n
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 00:40:13
+17 verbose request id 008822fe05cc8f30
+18 http request GET https://registry.npmjs.org/n
+19 http 200 https://registry.npmjs.org/n
+20 verbose headers { server: 'nginx/1.10.1',
+20 verbose headers   'content-type': 'application/json',
+20 verbose headers   'last-modified': 'Sun, 17 Sep 2017 08:22:16 GMT',
+20 verbose headers   etag: 'W/"59be30b8-116c4"',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'content-length': '11791',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Fri, 29 Sep 2017 22:40:12 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '175',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-mad9427-MAD',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '1',
+20 verbose headers   'x-timer': 'S1506724813.748990,VS0,VE1',
+20 verbose headers   vary: 'Accept-Encoding, Accept' }
+21 silly get cb [ 200,
+21 silly get   { server: 'nginx/1.10.1',
+21 silly get     'content-type': 'application/json',
+21 silly get     'last-modified': 'Sun, 17 Sep 2017 08:22:16 GMT',
+21 silly get     etag: 'W/"59be30b8-116c4"',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'content-length': '11791',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Fri, 29 Sep 2017 22:40:12 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '175',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-mad9427-MAD',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '1',
+21 silly get     'x-timer': 'S1506724813.748990,VS0,VE1',
+21 silly get     vary: 'Accept-Encoding, Accept' } ]
+22 verbose get saving n to C:\Users\AndonyRamon\AppData\Roaming\npm-cache\registry.npmjs.org\n\.cache.json
+23 verbose correctMkdir C:\Users\AndonyRamon\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+24 verbose makeDirectory C:\Users\AndonyRamon\AppData\Roaming\npm-cache creation not in flight; initializing
+25 verbose makeCacheDir UID & GID are irrelevant on win32
+26 silly install normalizeTree
+27 silly loadCurrentTree Finishing
+28 silly loadIdealTree Starting
+29 silly install loadIdealTree
+30 silly cloneCurrentTree Starting
+31 silly install cloneCurrentTreeToIdealTree
+32 silly cloneCurrentTree Finishing
+33 silly loadShrinkwrap Starting
+34 silly install loadShrinkwrap
+35 silly loadShrinkwrap Finishing
+36 silly loadAllDepsIntoIdealTree Starting
+37 silly install loadAllDepsIntoIdealTree
+38 silly rollbackFailedOptional Starting
+39 silly rollbackFailedOptional Finishing
+40 silly runTopLevelLifecycles Finishing
+41 silly install printInstalled
+42 verbose stack Error: Unsupported platform for n@2.1.8: wanted {"name":"n","description":"Interactively Manage All Your Node Versions","version":"2.1.8","author":{"name":"TJ Holowaychuk","email":"tj@vision-media.ca"},"homepage":"https://github.com/tj/n","bugs":{"url":"https://github.com/tj/n/issues"},"contributors":[{"name":"Travis Webb","email":"me@traviswebb.com","url":"tjw.io"},{"name":"Nimit Kalra","email":"me@nimit.io","url":"http://nimit.io"},{"name":"Troy Connor","email":"troy0820@gmail.com","url":"https://github.com/troy0820"}],"keywords":["nvm","node","version","manager","switcher","node","binary","env"],"bin":{"n":"./bin/n"},"repository":{"type":"git","url":"git://github.com/tj/n.git"},"preferGlobal":true,"os":["!win32"],"engines":{"node":"*"},"license":"MIT","gitHead":"14ab6ff01f3b673e2e29f465a00e0b29643bb8d9","_id":"n@2.1.8","_npmVersion":"5.0.3","_nodeVersion":"8.1.2","_npmUser":{"name":"troy0820","email":"troy0820@gmail.com"},"dist":{"integrity":"sha512-VN3To6jBHSdTHmv+fT00V1nBdj3MWdcOlEKBEaUtXKRqQhuN289B9Jym9P/L3rXfafAsapmh4Fcr/DUR8DGJVg==","shasum":"9b770f6ae0a93c49c64fb614625a63cc5a22d1fd","tarball":"https://registry.npmjs.org/n/-/n-2.1.8.tgz"},"maintainers":[{"name":"bat","email":"ben@benatkin.com"},{"name":"qw3rtman","email":"me@nimit.io"},{"name":"tedgaydos","email":"tedgaydos@gmail.com"},{"name":"tjholowaychuk","email":"tj@vision-media.ca"},{"name":"tjwebb","email":"me@traviswebb.com"},{"name":"troy0820","email":"troy0820@gmail.com"}],"_npmOperationalInternal":{"host":"s3://npm-registry-packages","tmp":"tmp/n-2.1.8.tgz_1498880450388_0.9696143395267427"},"directories":{},"_from":"n","_resolved":"https://registry.npmjs.org/n/-/n-2.1.8.tgz","_shasum":"9b770f6ae0a93c49c64fb614625a63cc5a22d1fd","_requested":{"raw":"n","scope":null,"escapedName":"n","name":"n","rawSpec":"","spec":"latest","type":"tag"},"_spec":"n","_where":"C:\\Users\\AndonyRamon\\Documents\\NetBeansProjects\\flags\\currency-flags","_args":[[{"raw":"n","scope":null,"escapedName":"n","name":"n","rawSpec":"","spec":"latest","type":"tag"},"C:\\Users\\AndonyRamon\\Documents\\NetBeansProjects\\flags\\currency-flags"]],"readme":"ERROR: No README data found!"} (current: {"os":"win32","cpu":"x64"})
+42 verbose stack     at checkPlatform (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:45:14)
+42 verbose stack     at thenWarnEngineIssues (C:\Program Files (x86)\nodejs\node_modules\npm\lib\install\validate-args.js:41:5)
+42 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\iferr\index.js:13:50
+42 verbose stack     at checkEngine (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\npm-install-checks\index.js:24:10)
+42 verbose stack     at module.exports.isInstallable (C:\Program Files (x86)\nodejs\node_modules\npm\lib\install\validate-args.js:38:3)
+42 verbose stack     at Array.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+42 verbose stack     at LOOP (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+42 verbose stack     at C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:18:7
+42 verbose stack     at checkSelf (C:\Program Files (x86)\nodejs\node_modules\npm\lib\install\validate-args.js:46:72)
+42 verbose stack     at Array.<anonymous> (C:\Program Files (x86)\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+43 verbose pkgid n@2.1.8
+44 verbose cwd C:\Users\AndonyRamon\Documents\NetBeansProjects\flags\currency-flags
+45 error Windows_NT 10.0.14393
+46 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "n"
+47 error node v7.6.0
+48 error npm  v4.1.2
+49 error code EBADPLATFORM
+50 error notsup Unsupported platform for n@2.1.8: wanted {"os":"!win32","arch":"any"} (current: {"os":"win32","arch":"x64"})
+51 error notsup Valid OS:    !win32
+51 error notsup Valid Arch:  any
+51 error notsup Actual OS:   win32
+51 error notsup Actual Arch: x64
+52 verbose exit [ 1, true ]
