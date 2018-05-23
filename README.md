@@ -16,6 +16,17 @@ This package outputs two CSS files (minified and unminified) with classes for cu
 <div class="currency-flag currency-flag-usd"></div>
 ```
 
+```js
+...
+import UsdFlag from '@transferwise/flags/react/transfer';
+
+const YourComponent = () => (
+  ...
+  <TransferIcon size="sm" />
+  ...
+);
+```
+
 <img src="http://i.imgur.com/Fdd5VLp.png">
 
 The `currency-flag` selector has a default `display` of `inline-block`, size of `24x16` and a `background-size` of `cover`.
@@ -30,3 +41,7 @@ The `currency-flag` selector has a default `display` of `inline-block`, size of 
 1. Commit to a new branch, include css files changed by build process
 1. Open a pull request
 1. Draft a release on GitHub with the same version as specified in `package.json`
+
+## TODO
+
+- Migrate flags to SVG
