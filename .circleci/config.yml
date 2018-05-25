@@ -1,0 +1,149 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install dependencies
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+  test:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Test
+          command: npm test
+  build-package:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Build
+          command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist
+            - react
+  release-to-github:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: .
+      - run:
+          name: Release to GitHub
+          command: npm run release-to-github
+  publish-on-npm:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Publish on npm
+          command: |
+            echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+            npm publish --access=public
+  deploy-to-aws:
+    docker:
+      - image: circleci/python:latest
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: Install AWS CLI
+          command: pip install awscli --upgrade --user
+      - run:
+          name: Create versioned directory
+          command: |
+            PACKAGE_VERSION=`python -c "import json; print(json.load(open('package.json'))[u'version'])"`
+            mkdir -p versioned/latest
+            cp -a dist/. versioned/latest
+            mkdir -p versioned/${PACKAGE_VERSION}
+            cp -a dist/. versioned/${PACKAGE_VERSION}
+      - run:
+          name: Deploy versioned directory to S3
+          command: |
+            export PATH=~/.local/bin:$PATH
+            aws s3 sync versioned s3://tw-frontend-assets/icons --acl public-read
+  demo:
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - attach_workspace:
+          at: .
+      - run:
+          name: Build demo
+          command: npm run build-demo
+      - run:
+          name: Deploy demo
+          command: |
+            git config --global user.email "circleci@transferwise.com"
+            git config --global user.name "CircleCI"
+            npm run deploy-demo
+
+workflows:
+  version: 2
+  install-test-build-release-and-build-demo:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: gh-pages
+      - test:
+          requires:
+            - build
+      - build-package:
+          requires:
+            - build
+      - release-to-github:
+          requires:
+            - test
+            - build-package
+          filters:
+            branches:
+              only: master
+      - publish-on-npm:
+          requires:
+            - test
+            - build-package
+          filters:
+            branches:
+              only: master
+      - deploy-to-aws:
+          requires:
+            - test
+            - build-package
+          filters:
+            branches:
+              only: master
+      - demo:
+          requires:
+            - test
+            - build-package
+          filters:
+            branches:
+              only: master

@@ -1,0 +1,10 @@
+/.circleci/
+/demo/
+/node_modules/
+/.eslintrc
+/.gitignore
+/.npmignore
+/buildDemo.js
+/createSprite.js
+/package-lock.json
+/styles.css

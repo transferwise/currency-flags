@@ -1,31 +1,46 @@
 {
-  "name": "@transferwise/currency-flags",
-  "version": "2.0.0",
-  "description": "Flags for currency codes.",
+  "name": "@transferwise/icons",
+  "version": "0.11.2",
+  "description": "TransferWise SVG icons",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p"
+    "start": "npm-run-all build demo:build",
+    "build": "npm-run-all clean build-sprite build-styles build-script build-version-script build-react-modules",
+    "clean": "rimraf dist",
+    "build-sprite": "node scripts/createSprite",
+    "build-styles": "cleancss -o dist/icons.min.css styles.css",
+    "build-script": "node scripts/buildScript",
+    "build-version-script": "node scripts/buildVersionScript",
+    "build-react-modules": "node scripts/buildReactModules",
+    "build-demo": "node scripts/buildDemo",
+    "deploy-demo": "gh-pages -d demo",
+    "test": "npm-run-all check-release-to-github lint",
+    "check-release-to-github": "release-to-github-with-changelog-pre-release-checks",
+    "lint": "eslint scripts",
+    "release-to-github": "release-to-github-with-changelog"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/transferwise/currency-flags.git"
+    "fullname": "transferwise/icons",
+    "url": "git+https://github.com/transferwise/icons.git"
   },
-  "author": "oliverviljamaa",
-  "contributors": [
-    "Carlos Matallín <carlos.matallin@transferwise.com>"
-  ],
-  "license": "MIT",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "prop-types": "^15.6.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "webpack-cli": "^2.1.3"
+  "author": "TransferWise Ltd.",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/transferwise/icons/issues"
   },
+  "homepage": "https://github.com/transferwise/icons#readme",
   "dependencies": {
-    "webpack": "^4.8.3"
+    "clean-css-cli": "^4.1.10",
+    "create-svg-icon-sprite": "^1.2.1",
+    "gh-pages": "^1.0.0",
+    "npm-run-all": "^4.1.1",
+    "release-to-github-with-changelog": "^1.1.5",
+    "svgo": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   }
 }

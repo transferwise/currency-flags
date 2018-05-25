@@ -1,1 +1,11 @@
-node_modules
+/demo/
+/dist/
+/node_modules/
+/react/
+
+# IntelliJ
+.idea/
+*.iml
+
+# OSX
+.DS_Store
