@@ -1,0 +1,56 @@
+defaults: &defaults
+  working_directory: ~/currency-flags
+  docker:
+    - image: circleci/node:latest
+
+version: 2
+jobs:
+  dependencies:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - persist_to_workspace:
+          root: .
+          paths:
+            - '*'
+  test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/currency-flags
+      - run:
+          name: Test
+          command: npm test
+  release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/currency-flags
+      - run:
+          name: Setup npm token
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_PUBLISH" >> ~/.npmrc
+      - run:
+          name: Build
+          command: npm run build
+      - run:
+          name: Release to GitHub
+          command: npm run release-to-github
+      - run:
+          name: Publish on npm
+          command: npm publish --access=public
+
+workflows:
+  version: 2
+  dependencies-test-and-release:
+    jobs:
+      - dependencies
+      - test:
+        requires:
+          - dependencies
+      - release:
+          requires:
+            - test
+          context: frontend-publish
