@@ -1,3 +1,8 @@
+# v1.7.2
+## Fix NPR flag
+
+![image](https://user-images.githubusercontent.com/8721312/44574407-02de7f80-a792-11e8-8e64-16bcf07b1ad7.png)
+
 # v1.7.1
 ## Fix SCR flag name
 
