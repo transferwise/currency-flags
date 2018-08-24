@@ -48,9 +48,12 @@ workflows:
     jobs:
       - dependencies
       - test:
-        requires:
-          - dependencies
+          requires:
+            - dependencies
       - release:
+          context: frontend-publish
           requires:
             - test
-          context: frontend-publish
+          filters:
+            branches:
+              only: master

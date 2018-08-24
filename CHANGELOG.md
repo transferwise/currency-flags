@@ -50,7 +50,7 @@ https://www.npmjs.com/package/currency-flags
 Remove old coat of arms from Peruvian flag
 
 # v0.6.0
-## v0.6.0
+## Add more currency flags
 
 Add more currency flags
 
