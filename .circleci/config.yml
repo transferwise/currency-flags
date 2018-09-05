@@ -20,28 +20,35 @@ jobs:
     <<: *defaults
     steps:
       - attach_workspace:
-          at: ~/currency-flags
+          at: .
       - run:
           name: Test
           command: npm test
-  release:
+  publish:
     <<: *defaults
     steps:
-      - attach_workspace:
-          at: ~/currency-flags
       - run:
           name: Setup npm token
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN_PUBLISH" >> ~/.npmrc
+      - attach_workspace:
+          at: .
       - run:
           name: Build
           command: npm run build
       - run:
-          name: Release to GitHub
-          command: npm run release-to-github
-      - run:
           name: Publish on npm
           command: npm publish --access=public
-
+  release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Release to GitHub
+          command: |
+            mkdir ~/.ssh
+            ssh-keyscan github.com >> ~/.ssh/known_hosts
+            npm run release-to-github
 workflows:
   version: 2
   dependencies-test-and-release:
@@ -50,10 +57,17 @@ workflows:
       - test:
           requires:
             - dependencies
-      - release:
+      - publish:
           context: frontend-publish
           requires:
             - test
+          filters:
+            branches:
+              only: master
+      - release:
+          context: frontend-publish
+          requires:
+            - publish
           filters:
             branches:
               only: master
