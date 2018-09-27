@@ -1,3 +1,6 @@
+# v1.8.0
+## Replace SAR, XAF and XOF flags
+
 # v1.7.2
 ## Fix NPR flag
 
