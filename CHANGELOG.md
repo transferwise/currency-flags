@@ -1,3 +1,6 @@
+# v1.9.0
+## Add PAB, LVL, LSL, BYR, TMT and SDG currencies flags
+
 # v1.8.0
 ## Replace SAR, XAF and XOF flags
 
