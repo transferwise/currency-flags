@@ -1,4 +1,7 @@
 # v1.8.0
+## Add flags for historical use (pre-EURO: Cyprus, Estonia, Latvia, Malta, Slovakia, Slovenia) and old codes (Romania, Turkey).
+
+# v1.8.0
 ## Replace SAR, XAF and XOF flags
 
 # v1.7.2
