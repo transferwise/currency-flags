@@ -1,3 +1,6 @@
+# v1.10.0
+## Added square flags with svg format
+
 # v1.9.0
 ## Replace XOF flag
 
