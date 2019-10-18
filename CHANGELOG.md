@@ -1,4 +1,4 @@
-# v1.10.1
+# v2.0.0
 ## Making square-flags accessible
 
 # v1.10.0
