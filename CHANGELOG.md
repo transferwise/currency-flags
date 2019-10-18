@@ -1,3 +1,6 @@
+# v2.0.1
+## Fixed build script from previous version
+
 # v2.0.0
 ## Making square-flags accessible
 
