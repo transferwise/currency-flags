@@ -1,3 +1,6 @@
+# v2.0.2
+## Removed ignore 
+
 # v2.0.1
 ## Fixed build script from previous version
 
