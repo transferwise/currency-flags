@@ -1,3 +1,6 @@
+# v1.10.1
+## Making square-flags accessible
+
 # v1.10.0
 ## Added square flags with svg format
 
