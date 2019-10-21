@@ -1,3 +1,6 @@
+# v2.1.0
+## New assets for square CAD, CNY, GEL, CRC, SGD, USD, added XOF
+ 
 # v2.0.3
 ## Updated readme
  

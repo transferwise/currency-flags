@@ -2,8 +2,8 @@
 <rect width="40" height="40" fill="white"/>
 <rect x="18" width="4" height="40" fill="#DE2910"/>
 <rect y="18" width="40" height="4" fill="#DE2910"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10 5H8V8H5V10H8V13H10V10H13V8H10V5Z" fill="#DE2910"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M32 5H30V8H27V10H30V13H32V10H35V8H32V5Z" fill="#DE2910"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10 27H8V30H5V32H8V35H10V32H13V30H10V27Z" fill="#DE2910"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M32 27H30V30H27V32H30V35H32V32H35V30H32V27Z" fill="#DE2910"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H10V10H7V12H10V15H12V12H15V10H12V7Z" fill="#DE2910"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30 7H28V10H25V12H28V15H30V12H33V10H30V7Z" fill="#DE2910"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 25H10V28H7V30H10V33H12V30H15V28H12V25Z" fill="#DE2910"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M30 25H28V28H25V30H28V33H30V30H33V28H30V25Z" fill="#DE2910"/>
 </svg>

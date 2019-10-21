@@ -1,6 +1,6 @@
 {
   "name": "currency-flags",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Flags for currency codes.",
   "files": [
     "dist/currency-flags.css",
