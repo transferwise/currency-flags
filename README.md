@@ -6,7 +6,7 @@ This package outputs two CSS files (minified and unminified) with classes for cu
 
 **1. Install**
 
-`npm install --save https://github.com/transferwise/currency-flags.git`
+`npm install --save currency-flags`
 
 **2. Add CSS to page**
 
