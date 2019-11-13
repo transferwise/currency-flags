@@ -1,3 +1,6 @@
+# v2.1.1
+## Update SGD flag
+ 
 # v2.1.0
 ## New assets for square CAD, CNY, GEL, CRC, SGD, USD, added XOF
  
