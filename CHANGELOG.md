@@ -1,4 +1,4 @@
-# v1.8.0
+# v1.9.0
 ## Add flags for historical use (pre-EURO: Cyprus, Estonia, Latvia, Malta, Slovakia, Slovenia) and old codes (Romania, Turkey).
 
 # v1.8.0
