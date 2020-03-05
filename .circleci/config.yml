@@ -1,7 +1,7 @@
 defaults: &defaults
   working_directory: ~/currency-flags
   docker:
-    - image: circleci/node:latest
+    - image: circleci/node:10.16
 
 version: 2
 jobs:
