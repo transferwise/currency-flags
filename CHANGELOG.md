@@ -1,3 +1,6 @@
+# v2.2.0
+## Add flags for historical use (pre-EURO: Cyprus, Estonia, Latvia, Malta, Slovakia, Slovenia) and old codes (Romania, Turkey).
+
 # v2.1.1
 ## Update SGD flag
  
