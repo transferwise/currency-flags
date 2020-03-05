@@ -1,5 +1,29 @@
-# v1.9.0
+# v2.2.0
 ## Add flags for historical use (pre-EURO: Cyprus, Estonia, Latvia, Malta, Slovakia, Slovenia) and old codes (Romania, Turkey).
+
+# v2.1.1
+## Update SGD flag
+ 
+# v2.1.0
+## New assets for square CAD, CNY, GEL, CRC, SGD, USD, added XOF
+ 
+# v2.0.3
+## Updated readme
+ 
+# v2.0.2
+## Removed ignore 
+
+# v2.0.1
+## Fixed build script from previous version
+
+# v2.0.0
+## Making square-flags accessible
+
+# v1.10.0
+## Added square flags with svg format
+
+# v1.9.0
+## Replace XOF flag
 
 # v1.8.0
 ## Replace SAR, XAF and XOF flags
