@@ -1,3 +1,6 @@
+# v2.1.2
+## Add BWP square flag
+
 # v2.1.1
 ## Update SGD flag
  
