@@ -1,3 +1,6 @@
+# v2.2.0
+## Add BLR flags
+
 # v2.1.2
 ## Add BWP square flag
 
