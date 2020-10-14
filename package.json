@@ -1,6 +1,6 @@
 {
   "name": "currency-flags",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "description": "Flags for currency codes.",
   "files": [
     "dist/currency-flags.css",
@@ -8,12 +8,9 @@
     "dist/square-flags/*.svg"
   ],
   "scripts": {
-    "build": "npm run minify-images && npm run inline-images && npm run change-class-names && npm run add-default-styles && npm run minify-css && npm run build-square-flags && rm -rf build && echo 'Done.'",
+    "build": "npm run move-to-dist && npm run minify-css && npm run build-square-flags && rm -rf build && echo 'Done.'",
     "test": "release-to-github-with-changelog-pre-release-checks",
-    "minify-images": "imagemin 'src/flags/*' --out-dir='build/flags'",
-    "inline-images": "imacss 'build/flags/*.png' > 'build/currency-flags-backgrounds.css'",
-    "change-class-names": "sed -i.bak 's/imacss/currency-flag/g' build/currency-flags-backgrounds.css",
-    "add-default-styles": "cat 'src/styles.css' 'build/currency-flags-backgrounds.css' > 'dist/currency-flags.css'",
+    "move-to-dist": "cat 'src/styles.css' > 'dist/currency-flags.css'",
     "build-square-flags": "mkdir -p dist/square-flags && cp src/square-flags/* dist/square-flags",
     "minify-css": "cleancss -o 'dist/currency-flags.min.css' 'dist/currency-flags.css'",
     "release-to-github": "release-to-github-with-changelog"
@@ -26,8 +23,6 @@
   "license": "MIT",
   "devDependencies": {
     "clean-css-cli": "^4.1.6",
-    "imacss": "^1.0.0",
-    "imagemin-cli": "^3.0.0",
     "release-to-github-with-changelog": "^1.2.0"
   }
 }

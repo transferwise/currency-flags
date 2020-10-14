@@ -1,6 +1,8 @@
 # currency-flags
 
-This package outputs two CSS files (minified and unminified) with classes for currency codes using base64 background images inlined.
+This package outputs two CSS files (minified and unminified) with classes for currency codes.
+
+> **Major version bump:** Note that v3 of this library no longer inlines the images with base64 encoding, instead referencing them by transferwise.com asset URL. To continue self-hosting images, please stay on v2.
 
 ## How to use
 
@@ -16,7 +18,7 @@ This package outputs two CSS files (minified and unminified) with classes for cu
 <div class="currency-flag currency-flag-usd"></div>
 ```
 
-<img src="http://i.imgur.com/Fdd5VLp.png">
+<img src="https://transferwise.com/public-resources/assets/flags/rectangle/usd.png">
 
 The `currency-flag` selector has a default `display` of `inline-block`, size of `24x16` and a `background-size` of `cover`.
 `currency-flag-sm`, `currency-flag-lg` and `currency-flag-xl` modifiers are available.
@@ -24,7 +26,8 @@ The `currency-flag` selector has a default `display` of `inline-block`, size of 
 ## Contributing
 
 1.  Clone repo
-1.  Add correctly sized (`48x32`) `png` files to `src/flags`
+1.  Add correctly sized (`48x32`) `png` files to [static-assets](https://github.com/transferwise/static-assets)
+1.  Add a new line to `src/styles.css` for the new currency, referencing the static asset URL.
 1.  **Bump version number in `package.json` according to [semver](http://semver.org/) and add an item that a release will be based on to `CHANGELOG.md`**. `npm install` to ensure the correct version in the lockfile.
 1.  Submit your pull request from a feature branch and get code reviewed.
 1.  If the pull request is approved and the [CircleCI build](https://circleci.com/gh/transferwise/currency-flags) passes, you will be able to squash and merge.
