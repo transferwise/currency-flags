@@ -1,3 +1,6 @@
+# v3.0.0
+## Use transferwise.com asset URLs instead of inline-encoding images
+
 # v2.1.2
 ## Add BWP square flag
 
