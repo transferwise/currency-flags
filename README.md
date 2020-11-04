@@ -23,6 +23,11 @@ This package outputs two CSS files (minified and unminified) with classes for cu
 The `currency-flag` selector has a default `display` of `inline-block`, size of `24x16` and a `background-size` of `cover`.
 `currency-flag-sm`, `currency-flag-lg` and `currency-flag-xl` modifiers are available.
 
+
+### Rectangular flag source images
+
+While the main CSS file no longer references them, the source images for the rectangular flags are available in `src/flags`.
+
 ## Contributing
 
 1.  Clone repo
