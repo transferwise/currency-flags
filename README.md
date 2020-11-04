@@ -26,7 +26,7 @@ The `currency-flag` selector has a default `display` of `inline-block`, size of 
 
 ### Rectangular flag source images
 
-While the main CSS file no longer references them, the source images for the rectangular flags are available in `src/flags`.
+While the main CSS file no longer references them, the source images for the rectangular flags are available in `src/flags/${currency_code}.png`.
 
 ## Contributing
 
