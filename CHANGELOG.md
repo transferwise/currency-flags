@@ -1,3 +1,6 @@
+# v3.1.0
+## Re-add source images for custom implementations
+
 # v3.0.0
 ## Use transferwise.com asset URLs instead of inline-encoding images
 
