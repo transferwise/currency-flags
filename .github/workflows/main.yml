@@ -10,5 +10,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Install dependencies
+      - name: Install
         run: yarn --frozen-lockfile
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    needs: install
+
+    steps:
+      - name: Test
+        run: yarn test
