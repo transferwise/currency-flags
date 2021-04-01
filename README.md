@@ -2,7 +2,7 @@
 
 This package outputs two CSS files (minified and unminified) with classes for currency codes.
 
-> **Major version bump:** Note that v3 of this library no longer inlines the images with base64 encoding, instead referencing them by transferwise.com asset URL. To continue self-hosting images, please stay on v2.
+> **Major version bump:** Note that v3 of this library no longer inlines the images with base64 encoding, instead referencing them by wise.com asset URL. To continue self-hosting images, please stay on v2.
 
 ## How to use
 
@@ -18,7 +18,7 @@ This package outputs two CSS files (minified and unminified) with classes for cu
 <div class="currency-flag currency-flag-usd"></div>
 ```
 
-<img src="https://transferwise.com/public-resources/assets/flags/rectangle/usd.png">
+<img src="https://wise.com/public-resources/assets/flags/rectangle/usd.png">
 
 The `currency-flag` selector has a default `display` of `inline-block`, size of `24x16` and a `background-size` of `cover`.
 `currency-flag-sm`, `currency-flag-lg` and `currency-flag-xl` modifiers are available.
