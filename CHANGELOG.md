@@ -1,3 +1,6 @@
+# v3.2.0
+## Use wise.com asset URLs instead of transferwise.com
+
 # v3.1.0
 ## Re-add source images for custom implementations
 
