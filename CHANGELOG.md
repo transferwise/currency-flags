@@ -1,3 +1,6 @@
+# v3.2.1
+##Add Fiji flag
+
 # v3.2.0
 ## Use wise.com asset URLs instead of transferwise.com
 
