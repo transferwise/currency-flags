@@ -1,0 +1,25 @@
+# This is an automatically generated base configuration
+# For further configuration options and tuning:
+# https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    allow:
+      - dependency-name: 'currency-flags'
+      - dependency-name: 'react'
+      - dependency-name: 'react-dom'
+      - dependency-name: 'react-scripts'
+      - dependency-name: 'typescript'
+      - dependency-name: '@transferwise/*'
+      - dependency-name: 'antd'
+      - dependency-name: '@ant-design/*'
+      - dependency-name: 'axios'
+      - dependency-name: 'jest'
+      - dependency-name: '@testing-library/*'
+      - dependency-name: 'nock'
+    pull-request-branch-name:
+      separator: '-'
